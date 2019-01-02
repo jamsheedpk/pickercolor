@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'color';
+  pathval:any=12121;
+
+getcolval(event)
+{
+console.log("peintting getcolval event", event);
+}
 }

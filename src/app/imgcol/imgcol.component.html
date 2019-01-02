@@ -1,0 +1,81 @@
+
+<body>
+  <input type='file' accept="image/*" (change)="readUrl($event)"><br/><br/>
+  <div class="main">
+ <canvas width="500" height="400" #canvasval class="hideData" [class.displayData]="displayData" (click)="getPixel($event)">
+ </canvas>
+
+ <div class="data hideData" [class.displayData]="displayData">
+  
+ <h2>Preview</h2> 
+ <div class="row">
+  <div class="col-sm-3">
+    <div #colboxval class="colorval" [class.displayCol]="displayCol"></div>
+ <div #colboxval1 class="colorval" [class.displayCol]="displayCol"></div>
+ <div #colboxval2 class="colorval" [class.displayCol]="displayCol"></div>
+ <div #colboxval3 class="colorval" [class.displayCol]="displayCol"></div>
+  </div>
+  <div class="col-sm-3">
+    <div #colboxval4 class="colorval" [class.displayCol]="displayCol"></div>
+ <div #colboxval5 class="colorval" [class.displayCol]="displayCol"></div>
+ <div #colboxval6 class="colorval" [class.displayCol]="displayCol"></div>
+ <div #colboxval7 class="colorval" [class.displayCol]="displayCol"></div>
+  </div>
+  <div class="col-sm-3">
+    <div #colboxval8 class="colorval" [class.displayCol]="displayCol"></div>
+  <div #colboxval9 class="colorval" [class.displayCol]="displayCol"></div>
+  <div #colboxval10 class="colorval" [class.displayCol]="displayCol"></div>
+  <div #colboxval11 class="colorval" [class.displayCol]="displayCol"></div>
+</div>
+  <div class="col-sm-3">
+      <div #colboxval12 class="colorval" [class.displayCol]="displayCol"></div>
+      <div #colboxval13 class="colorval" [class.displayCol]="displayCol"></div>
+      <div #colboxval14 class="colorval" [class.displayCol]="displayCol"></div>
+      <div #colboxval15 class="colorval" [class.displayCol]="displayCol"></div>
+  </div>
+
+
+</div>
+
+
+
+
+
+     <h2>Get Average Color of Image</h2>
+     <div class="row">
+         <div class="col-sm-4">
+             <div #colboxval16 class="colorval" [class.displayCol]="displayCol"></div>
+         </div>
+         <div class="col-sm-4">
+             <div>HEX Value:</div>
+             <div><input type="text" value={{_hexvalavg}}></div>
+
+         </div>
+         <div class="col-sm-4">
+             <div>RGBA Value:</div>
+             <div><input type="text" value={{_rgbavalavg}}></div>
+
+         </div>
+     </div>
+
+     <h2>Color Code  Picker </h2>
+     <div class="row">
+         <div class="col-sm-4">
+                <div #colboxval17 class="colorval" [class.displayCol]="displayCol"></div>
+         </div>
+         <div class="col-sm-4">
+             <div>HEX Value:</div>
+             <div><input type="text" value={{_hexval}}></div>
+
+         </div>
+         <div class="col-sm-4">
+             <div>RGBA Value:</div>
+             <div><input type="text" value={{_rgbaval}}></div>
+
+         </div>
+    </div>
+<button type="submit" (click)="getPixelColor(24)">Click ColorPicker</button>
+<!-- <button type="submit" (click)="getPalette(10,10)">Click pixelArray</button> -->
+</div>
+</div>
+</body>
